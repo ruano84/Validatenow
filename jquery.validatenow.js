@@ -6,7 +6,8 @@
 	    {
             req: "req",
             errorClass: "error",
-            onError: function() {},
+            errorMsg: "error.msg",
+            onError: null,
             onSubmit: null,
             fieldEmptyStr: "El dato suministrado no es correcto, por favor verifique e intente nuevamente",
             fieldInvalidStr: "El dato suministrado no es correcto, por favor verifique e intente nuevamente"
@@ -61,10 +62,13 @@
 					    });
 					    
 					    if ($haserror) {
-						    if(typeof($settings.onError) === 'function')
+						    if(typeof($settings.onError) === 'function'){
 							    $settings.onError.apply(this);
+							}else{
+								$("."+$settings.errorMsg).show();
+							}
+								
 					    } else {
-					    	console.log($settings.onSubmit);
 						    if(typeof($settings.onSubmit) === 'function'){
 							    
 							    $value = $settings.onSubmit.apply(this);
@@ -90,6 +94,12 @@
 				    $(".error.msg").hide();
 			    }
 			    return $(this);
+		    },
+		    reset: function(){
+		    	if(typeof(this.submit) == "function"){
+		    		$("input[type=text], textarea", this).val("");
+		    		$methods.clean.apply(this);
+		    	}
 		    }
  		}
     
