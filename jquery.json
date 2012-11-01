@@ -1,0 +1,13 @@
+{
+	name:"validatenow",
+	version:"0.2",
+	title:"jQuery Validatenow",
+	author:"ruano84",
+	"licenses": [
+		{
+		   "type": "GPLv2",
+		   "url": "http://opensource.org/licenses/GPL-2.0"
+		}
+	],
+	dependencies: {"jquery", version:"1.8.2"}
+}
