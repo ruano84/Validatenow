@@ -66,7 +66,7 @@ El par&aacute;rametro <code>metodo</code> acepta un String, los m&eacute;todos q
 	- onSubmit  &lt;Function&gt;: Callback a llamar en caso de que Validatenow verifique que el formulario sea v&aacute;. Nota: Al asignar esta funci&oacute;n, el submit del formulario no se har&aacute; autom&aacute;ticamente, a menos que el valor de retorno de la funci&oacute; sea <code>true</code>. Es ideal para utilizar adicionalmente una llamada a AjaxSubmit, por ejemplo.
 
 2. "reset": Vacía los valores de los campos del formulario, ocultando el mensaje de error identificado por <code>erroMsg</code> y los estilos asignados con <code>errorMsg</code>. No acepta el par&aacute;metro de opciones.
-3. "clean": Casi idéntico que el método <code>reset</code>, solo que deja los valores de los campos del formulario intacto.
+3. "clean": Casi idéntico al método <code>reset</code>, solo que deja los valores de los campos del formulario intacto.
 
 #Errores conocidos
 ***
