@@ -53,24 +53,24 @@ Validatenow es un pequeño plugin para jQuery para validar formularios de html d
 
 La manera de invocar Validatenow es la siguiente:
 
-	<code>$("form[name=nombreformulario]").validatenow( metodo, [opciones] );</code>
+	$("form[name=nombreformulario]").validatenow( metodo, [opciones] );
 
-El par&aacute;rametro metodo acepta un String, los m&eacute;todos que puedes utilizar son los siguientes:
+El par&aacute;rametro <code>metodo</code> acepta un String, los m&eacute;todos que puedes utilizar son los siguientes:
 	
-	1. "init": Invocas a Validatenow para que valide el formulario de acuerdo a las clases de css que agregaste en tu código html. Este m&eacute;todo acepta un segundo par&aacute;metro de tipo objeto o null, que puede tener los siguientes llaves de nombre:
+1. "init": Invocas a Validatenow para que valide el formulario de acuerdo a las clases de css que agregaste en tu código html. Este m&eacute;todo acepta un segundo par&aacute;metro de tipo objeto o null, que puede tener los siguientes llaves de nombre:
 
-		-req &ltString&gt;: Clase css a utilizar para indicar a Validatenow que un campo es requerido (Ojo: no utilizar el punto al comienzo del string). Valor por defecto: "req"
-		-errorClass &ltString&gt;: Clase css con que se estilizará un campo de input en caso de que Validatenow verifique que su valor no coincide con el formato requerido (Ojo: no utilizar el punto al comienzo del string). Valor por defecto: "error.msg"
-		-errorMsg &ltString&gt;: Clase css con que se identificará el mensaje de error que se mostrará en caso de que Validatenow verifique que el formulario no es válido (Ojo: no utilizar el punto al comienzo del string). Valor por defecto: "error.msg"
-		- onError &ltFunction&gt;: Callback a llamar en caso de que Validatenow encuentre al formulario inválido. Nota: Si este valor es asignado, Validatenow no mostrará el mensaje de error identificado por <code>errorMsg</code> autom&aacute;ticamente.
-		- onSubmit  &ltFunction&gt;: Callback a llamar en caso de que Validatenow verifique que el formulario sea v&aacute;. Nota: Al asignar esta funci&oacute;n, el submit del formulario no se har&aacute; autom&aacute;ticamente, a menos que el valor de retorno de la funci&oacute; sea <code>true</code>. Es ideal para utilizar adicionalmente una llamada a AjaxSubmit, por ejemplo.
+	-req &ltString&gt;: Clase css a utilizar para indicar a Validatenow que un campo es requerido (Ojo: no utilizar el punto al comienzo del string). Valor por defecto: "req"
+	-errorClass &ltString&gt;: Clase css con que se estilizará un campo de input en caso de que Validatenow verifique que su valor no coincide con el formato requerido (Ojo: no utilizar el punto al comienzo del string). Valor por defecto: "error.msg"
+	-errorMsg &ltString&gt;: Clase css con que se identificará el mensaje de error que se mostrará en caso de que Validatenow verifique que el formulario no es válido (Ojo: no utilizar el punto al comienzo del string). Valor por defecto: "error.msg"
+	- onError &ltFunction&gt;: Callback a llamar en caso de que Validatenow encuentre al formulario inválido. Nota: Si este valor es asignado, Validatenow no mostrará el mensaje de error identificado por <code>errorMsg</code> autom&aacute;ticamente.
+	- onSubmit  &ltFunction&gt;: Callback a llamar en caso de que Validatenow verifique que el formulario sea v&aacute;. Nota: Al asignar esta funci&oacute;n, el submit del formulario no se har&aacute; autom&aacute;ticamente, a menos que el valor de retorno de la funci&oacute; sea <code>true</code>. Es ideal para utilizar adicionalmente una llamada a AjaxSubmit, por ejemplo.
 
-	2. "reset": Vacía los valores de los campos del formulario, ocultando el mensaje de error identificado por <code>erroMsg</code> y los estilos asignados con <code>errorMsg</code>. No acepta el par&aacute;metro de opciones.
-	3. "clean": Casi idéntico que el método <code>reset</code>, solo que deja los valores de los campos del formulario intacto.
+2. "reset": Vacía los valores de los campos del formulario, ocultando el mensaje de error identificado por <code>erroMsg</code> y los estilos asignados con <code>errorMsg</code>. No acepta el par&aacute;metro de opciones.
+3. "clean": Casi idéntico que el método <code>reset</code>, solo que deja los valores de los campos del formulario intacto.
 
 #Errores conocidos
 ***
 
--Al utilizar el método <code>reset</code>, se borrará también todos los input de tipo hidden, usar con precaución
+-Al utilizar el método <code>reset</code>, se borrará también el valor de todos los input de tipo hidden, usar con precaución
 
 // English version coming soon
