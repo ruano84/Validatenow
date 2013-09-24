@@ -1,6 +1,6 @@
 // Versión en Español
 
-Validatenow es un pequeño plugin para jQuery para validar formularios de html de manera rápida. Por ahora solo valida elementos <code>&lt;input type="text"&gt;</code> y <code>&lt;textarea&gt;</code>, en un futuro cercano agregaré soporte a otros elementos inputs.
+Validatenow es un pequeño plugin para jQuery para validar formularios de html de manera rápida. Por ahora solo valida elementos <code>&lt;input type="text"&gt;</code>, <code>&lt;select&gt;</code> y <code>&lt;textarea&gt;</code>, en un futuro cercano agregaré soporte a otros elementos inputs.
 
 #Modo de uso:
 * * *
